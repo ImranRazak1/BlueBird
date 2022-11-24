@@ -16,6 +16,7 @@
 		B6F4575F2929789400E6F862 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4575E2929789400E6F862 /* PostViewController.swift */; };
 		B6F45761292978AC00E6F862 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F45760292978AC00E6F862 /* ProfileViewController.swift */; };
 		B6F4576429297FA200E6F862 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4576329297FA200E6F862 /* PostsTableViewCell.swift */; };
+		B6F45766292D1C9300E6F862 /* ProfileViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F45765292D1C9300E6F862 /* ProfileViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B6F4575E2929789400E6F862 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B6F45760292978AC00E6F862 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F4576329297FA200E6F862 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		B6F45765292D1C9300E6F862 /* ProfileViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F4576329297FA200E6F862 /* PostsTableViewCell.swift */,
+				B6F45765292D1C9300E6F862 /* ProfileViewHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				B6F4575D2929772E00E6F862 /* HomeViewController.swift in Sources */,
 				B6F4576429297FA200E6F862 /* PostsTableViewCell.swift in Sources */,
 				B6F4575F2929789400E6F862 /* PostViewController.swift in Sources */,
+				B6F45766292D1C9300E6F862 /* ProfileViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
