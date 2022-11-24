@@ -18,18 +18,24 @@ class ProfileViewController: UIViewController {
         
     }()
     
-
+    let backButton =  UIButton(type: .system)
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationItem.title = "Profile"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title =  "🐥 BlueBird"
+        navigationItem.setRightBarButton(editButtonItem, animated: true)
         view.addSubview(profileTableView)
         
-
         
-        let headerView =  ProfileViewHeader(frame: CGRect(x: 0, y: 0, width: profileTableView.frame.width, height: 380))
+        backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        backButton.setTitle("Back", for: .normal)
+        backButton.sizeToFit()
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+ 
+        
+        let headerView =  ProfileViewHeader(frame: CGRect(x: 0, y: 0, width: profileTableView.frame.width, height: 280))
         
         
         profileTableView.delegate = self
@@ -57,7 +63,9 @@ class ProfileViewController: UIViewController {
         ])
     }
     
-    
+    @objc private func backButtonTapped() {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
 
 }
 

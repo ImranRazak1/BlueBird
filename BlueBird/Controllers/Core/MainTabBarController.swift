@@ -31,8 +31,8 @@ class MainTabBarController: UITabBarController {
         vc2.tabBarItem.title = "Post"
         
         
-        vc3.tabBarItem.image = UIImage(systemName: "person.crop.circle")
-        vc3.tabBarItem.title = "Profile"
+        vc3.tabBarItem.image = UIImage(systemName: "line.3.horizontal")
+        vc3.tabBarItem.title = "Settings"
         
         setViewControllers([vc1, vc2, vc3], animated: true)
         

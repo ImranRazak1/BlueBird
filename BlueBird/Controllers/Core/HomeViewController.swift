@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     
     private let timelineTableView: UITableView = {
         
@@ -18,18 +18,27 @@ class HomeViewController: UIViewController {
         
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         navigationItem.title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
-
         
+        let rightBarButton = UIBarButtonItem(title: "Profile", style: .done, target: self, action: #selector(profileButtonTapped))
+        rightBarButton.image = UIImage(systemName: "person.crop.circle")
+        
+        navigationItem.rightBarButtonItem = rightBarButton
+        
+        navigationController?.navigationBar.isHidden = false
+
         
         view.addSubview(timelineTableView)
         timelineTableView.dataSource = self
         timelineTableView.delegate = self
+        
+        
         
         
     }
@@ -39,9 +48,19 @@ class HomeViewController: UIViewController {
         
         timelineTableView.frame = view.frame
         timelineTableView.separatorInset = .zero
+        
     }
     
+    @objc private func profileButtonTapped() {
+        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
+        profileViewController.modalPresentationStyle = .fullScreen
+        present(profileViewController, animated: true)
+        
+    }
+    
+    
 }
+
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,8 +76,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-    */
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     return 120
+     }
+     */
 }
