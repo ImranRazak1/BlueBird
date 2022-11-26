@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -49,6 +50,15 @@ class HomeViewController: UIViewController {
         timelineTableView.frame = view.frame
         timelineTableView.separatorInset = .zero
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if Auth.auth().currentUser == nil {
+            let vc = UINavigationController(rootViewController: OnboardingViewController())
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
+        }
     }
     
     @objc private func profileButtonTapped() {

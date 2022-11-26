@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewHeader: UIView {
     
+    
+    
     private let profileImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,70 +74,64 @@ class ProfileViewHeader: UIView {
     }()
     
     
-    //Profile Edit Button
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //backgroundColor = .systemGray
+        backgroundColor = .systemBackground
         addSubview(profileImageView)
         addSubview(profileName)
         addSubview(profileUserHandel)
         addSubview(followerStats)
         addSubview(profileBio)
+
         
+        
+        
+
+        profileImageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+      
+        let seperator = UIView(frame: .zero)
+        seperator.backgroundColor = .quaternaryLabel
+        seperator.translatesAutoresizingMaskIntoConstraints = false
+        seperator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+
+  
+        
+        // Verical ProfileUsername Stack
         let profileUserNameStack =  UIStackView(arrangedSubviews: [profileName, profileUserHandel])
         profileUserNameStack.axis =  .vertical
-        profileUserNameStack.spacing = 5
-        profileUserNameStack.translatesAutoresizingMaskIntoConstraints =  false
-        addSubview(profileUserNameStack)
+     
+        //Horizontal ProfileInfoStack
+        let profileInfoStack = UIStackView(arrangedSubviews: [profileImageView, profileUserNameStack])
+        profileInfoStack.axis = .horizontal
+        profileInfoStack.spacing = 5
+        profileInfoStack.distribution =  .fill
+        profileInfoStack.translatesAutoresizingMaskIntoConstraints = false
+        profileInfoStack.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        
+        //Porfile Header Stack
+        let profileHeaderStack = UIStackView(arrangedSubviews: [profileInfoStack, followerStats, profileBio, seperator])
+        profileHeaderStack.axis = .vertical
+        profileHeaderStack.spacing = 10
+        profileHeaderStack.distribution = .fill
+        profileHeaderStack.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(profileHeaderStack)
+ 
         NSLayoutConstraint.activate([
-            profileUserNameStack.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 5),
-            profileUserNameStack.topAnchor.constraint(equalTo: topAnchor, constant: 15)
-           // profileUserNameStack.bottomAnchor.constraint(equalTo: profileBio.bottomAnchor, constant: 10)
-        
+            profileHeaderStack.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            profileHeaderStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            profileHeaderStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
         
         ])
         
-        ConfigureConstraints()
-    }
-    
-    private func ConfigureConstraints() {
-        
-        
-        let profileImageConstraints = [
-            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            //profileImageView.centerYAnchor.constraint(equalTo: bottomAnchor, constant: 10),
-            profileImageView.widthAnchor.constraint(equalToConstant: 50),
-            profileImageView.heightAnchor.constraint(equalToConstant: 50)
-        ]
-        
-        
-        let profileFollowerConstraints = [
-            followerStats.leadingAnchor.constraint(equalTo: profileImageView.leadingAnchor),
-            followerStats.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 5)
-            
-        ]
-         
-        
-        let profileBioConstraints = [
-            profileBio.leadingAnchor.constraint(equalTo: followerStats.leadingAnchor),
-            //profileBio.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            profileBio.topAnchor.constraint(equalTo: followerStats.bottomAnchor, constant: 5),
-            //profileBio.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
-        ]
-               
-        
-        
-        NSLayoutConstraint.activate(profileImageConstraints)
-        NSLayoutConstraint.activate(profileFollowerConstraints)
-        NSLayoutConstraint.activate(profileBioConstraints)
-        
-        
         
     }
     
+    
+    
+   
     required init?(coder: NSCoder) {
         fatalError("Profile Header View failed to load")
         
