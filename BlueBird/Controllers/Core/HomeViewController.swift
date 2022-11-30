@@ -20,6 +20,14 @@ class HomeViewController: UIViewController {
     }()
     
     
+    private func handleAuthentication() {
+        if Auth.auth().currentUser == nil {
+            let vc = UINavigationController(rootViewController: OnboardingViewController())
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +38,10 @@ class HomeViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(title: "Profile", style: .done, target: self, action: #selector(profileButtonTapped))
         rightBarButton.image = UIImage(systemName: "person.crop.circle")
         
+        let leftBarButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(didSignOut))
+        
         navigationItem.rightBarButtonItem = rightBarButton
+        navigationItem.leftBarButtonItem = leftBarButton
         
         navigationController?.navigationBar.isHidden = false
 
@@ -44,6 +55,11 @@ class HomeViewController: UIViewController {
         
     }
     
+    @objc private func didSignOut(){
+        try? Auth.auth().signOut()
+        handleAuthentication()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -54,11 +70,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if Auth.auth().currentUser == nil {
-            let vc = UINavigationController(rootViewController: OnboardingViewController())
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: false)
-        }
+        handleAuthentication()
     }
     
     @objc private func profileButtonTapped() {

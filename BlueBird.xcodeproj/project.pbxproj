@@ -28,6 +28,15 @@
 		B6F45779293289FE00E6F862 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B6F45778293289FE00E6F862 /* FirebaseStorage */; };
 		B6F4577B293289FE00E6F862 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B6F4577A293289FE00E6F862 /* FirebaseStorageCombine-Community */; };
 		B6F4577E29328CB500E6F862 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */; };
+		B6F457802932E1A400E6F862 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */; };
+		B6F457842932ED2900E6F862 /* ChooseUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */; };
+		B6F457862932ED3500E6F862 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */; };
+		B6F457882932ED4200E6F862 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457872932ED4200E6F862 /* GetStartedViewController.swift */; };
+		B6F4578B2932EF3B00E6F862 /* RegisterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */; };
+		B6F4578E2932FAC500E6F862 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4578D2932FAC500E6F862 /* AuthManager.swift */; };
+		B6F4579029378B7000E6F862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4578F29378B7000E6F862 /* LoginViewController.swift */; };
+		B6F4579329379BE800E6F862 /* BluebirdUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4579229379BE800E6F862 /* BluebirdUser.swift */; };
+		B6F4579529379E5000E6F862 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4579429379E5000E6F862 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +54,15 @@
 		B6F45765292D1C9300E6F862 /* ProfileViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewHeader.swift; sourceTree = "<group>"; };
 		B6F457672932889300E6F862 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUsernameViewController.swift; sourceTree = "<group>"; };
+		B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
+		B6F457872932ED4200E6F862 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterviewViewModel.swift; sourceTree = "<group>"; };
+		B6F4578D2932FAC500E6F862 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B6F4578F29378B7000E6F862 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B6F4579229379BE800E6F862 /* BluebirdUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluebirdUser.swift; sourceTree = "<group>"; };
+		B6F4579429379E5000E6F862 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +104,9 @@
 		B6F457452929761200E6F862 /* BlueBird */ = {
 			isa = PBXGroup;
 			children = (
+				B6F4579129379B9B00E6F862 /* Models */,
+				B6F4578C2932FAAE00E6F862 /* Managers */,
+				B6F457892932ED9600E6F862 /* viewModels */,
 				B6F4576229297E2000E6F862 /* Views */,
 				B6F4575A2929770E00E6F862 /* Controllers */,
 				B6F457462929761200E6F862 /* AppDelegate.swift */,
@@ -131,8 +152,38 @@
 			isa = PBXGroup;
 			children = (
 				B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */,
+				B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */,
+				B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */,
+				B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */,
+				B6F457872932ED4200E6F862 /* GetStartedViewController.swift */,
+				B6F4578F29378B7000E6F862 /* LoginViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B6F457892932ED9600E6F862 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		B6F4578C2932FAAE00E6F862 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4578D2932FAC500E6F862 /* AuthManager.swift */,
+				B6F4579429379E5000E6F862 /* DatabaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B6F4579129379B9B00E6F862 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4579229379BE800E6F862 /* BluebirdUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,12 +271,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F457882932ED4200E6F862 /* GetStartedViewController.swift in Sources */,
 				B6F45761292978AC00E6F862 /* ProfileViewController.swift in Sources */,
+				B6F457802932E1A400E6F862 /* RegisterViewController.swift in Sources */,
 				B6F4574B2929761200E6F862 /* MainTabBarController.swift in Sources */,
+				B6F4578E2932FAC500E6F862 /* AuthManager.swift in Sources */,
+				B6F457842932ED2900E6F862 /* ChooseUsernameViewController.swift in Sources */,
+				B6F4579329379BE800E6F862 /* BluebirdUser.swift in Sources */,
 				B6F457472929761200E6F862 /* AppDelegate.swift in Sources */,
+				B6F4579529379E5000E6F862 /* DatabaseManager.swift in Sources */,
+				B6F4578B2932EF3B00E6F862 /* RegisterviewViewModel.swift in Sources */,
 				B6F457492929761200E6F862 /* SceneDelegate.swift in Sources */,
 				B6F4575D2929772E00E6F862 /* HomeViewController.swift in Sources */,
+				B6F457862932ED3500E6F862 /* InviteFriendsViewController.swift in Sources */,
 				B6F4576429297FA200E6F862 /* PostsTableViewCell.swift in Sources */,
+				B6F4579029378B7000E6F862 /* LoginViewController.swift in Sources */,
 				B6F4575F2929789400E6F862 /* PostViewController.swift in Sources */,
 				B6F4577E29328CB500E6F862 /* OnboardingViewController.swift in Sources */,
 				B6F45766292D1C9300E6F862 /* ProfileViewHeader.swift in Sources */,
