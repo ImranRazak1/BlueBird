@@ -29,7 +29,7 @@
 		B6F4577B293289FE00E6F862 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B6F4577A293289FE00E6F862 /* FirebaseStorageCombine-Community */; };
 		B6F4577E29328CB500E6F862 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */; };
 		B6F457802932E1A400E6F862 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */; };
-		B6F457842932ED2900E6F862 /* ChooseUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */; };
+		B6F457842932ED2900E6F862 /* ProfileDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457832932ED2900E6F862 /* ProfileDataViewController.swift */; };
 		B6F457862932ED3500E6F862 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */; };
 		B6F457882932ED4200E6F862 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F457872932ED4200E6F862 /* GetStartedViewController.swift */; };
 		B6F4578B2932EF3B00E6F862 /* RegisterviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */; };
@@ -37,6 +37,8 @@
 		B6F4579029378B7000E6F862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4578F29378B7000E6F862 /* LoginViewController.swift */; };
 		B6F4579329379BE800E6F862 /* BluebirdUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4579229379BE800E6F862 /* BluebirdUser.swift */; };
 		B6F4579529379E5000E6F862 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4579429379E5000E6F862 /* DatabaseManager.swift */; };
+		B6F45797293BA17F00E6F862 /* HomeviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F45796293BA17F00E6F862 /* HomeviewViewModel.swift */; };
+		B6F45799293BA72700E6F862 /* ProfileviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F45798293BA72700E6F862 /* ProfileviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +57,7 @@
 		B6F457672932889300E6F862 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUsernameViewController.swift; sourceTree = "<group>"; };
+		B6F457832932ED2900E6F862 /* ProfileDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataViewController.swift; sourceTree = "<group>"; };
 		B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 		B6F457872932ED4200E6F862 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterviewViewModel.swift; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		B6F4578F29378B7000E6F862 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B6F4579229379BE800E6F862 /* BluebirdUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluebirdUser.swift; sourceTree = "<group>"; };
 		B6F4579429379E5000E6F862 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		B6F45796293BA17F00E6F862 /* HomeviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeviewViewModel.swift; sourceTree = "<group>"; };
+		B6F45798293BA72700E6F862 /* ProfileviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,7 @@
 			children = (
 				B6F4577D29328CB500E6F862 /* OnboardingViewController.swift */,
 				B6F4577F2932E1A400E6F862 /* RegisterViewController.swift */,
-				B6F457832932ED2900E6F862 /* ChooseUsernameViewController.swift */,
+				B6F457832932ED2900E6F862 /* ProfileDataViewController.swift */,
 				B6F457852932ED3500E6F862 /* InviteFriendsViewController.swift */,
 				B6F457872932ED4200E6F862 /* GetStartedViewController.swift */,
 				B6F4578F29378B7000E6F862 /* LoginViewController.swift */,
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				B6F4578A2932EF3B00E6F862 /* RegisterviewViewModel.swift */,
+				B6F45796293BA17F00E6F862 /* HomeviewViewModel.swift */,
+				B6F45798293BA72700E6F862 /* ProfileviewViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -276,13 +282,15 @@
 				B6F457802932E1A400E6F862 /* RegisterViewController.swift in Sources */,
 				B6F4574B2929761200E6F862 /* MainTabBarController.swift in Sources */,
 				B6F4578E2932FAC500E6F862 /* AuthManager.swift in Sources */,
-				B6F457842932ED2900E6F862 /* ChooseUsernameViewController.swift in Sources */,
+				B6F457842932ED2900E6F862 /* ProfileDataViewController.swift in Sources */,
 				B6F4579329379BE800E6F862 /* BluebirdUser.swift in Sources */,
 				B6F457472929761200E6F862 /* AppDelegate.swift in Sources */,
+				B6F45797293BA17F00E6F862 /* HomeviewViewModel.swift in Sources */,
 				B6F4579529379E5000E6F862 /* DatabaseManager.swift in Sources */,
 				B6F4578B2932EF3B00E6F862 /* RegisterviewViewModel.swift in Sources */,
 				B6F457492929761200E6F862 /* SceneDelegate.swift in Sources */,
 				B6F4575D2929772E00E6F862 /* HomeViewController.swift in Sources */,
+				B6F45799293BA72700E6F862 /* ProfileviewViewModel.swift in Sources */,
 				B6F457862932ED3500E6F862 /* InviteFriendsViewController.swift in Sources */,
 				B6F4576429297FA200E6F862 /* PostsTableViewCell.swift in Sources */,
 				B6F4579029378B7000E6F862 /* LoginViewController.swift in Sources */,

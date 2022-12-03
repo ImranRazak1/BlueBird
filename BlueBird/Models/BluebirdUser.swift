@@ -15,7 +15,7 @@ struct BluebirdUser: Codable {
     var usernameHandle: String = ""
     var followersCount: Double = 0
     var followingCount: Double = 0
-    var profileImage: String = ""
+    var profileImagePath: String = ""
     var isUserOnboarded: Bool = false
     
     init(from user: User) {
